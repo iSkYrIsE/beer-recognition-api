@@ -1,0 +1,27 @@
+name: deploy-pm2
+
+
+on:
+  push:
+    branches: 
+      - 'main'
+  
+
+jobs:
+
+  deploy_pm2:
+    name: PM2 deployment
+    runs-on: [self-hosted, Linux, X64]  
+    steps: 
+    
+    - name: download new changes
+      uses: actions/checkout@v2
+
+    - name: deploy with script
+      run: sudo pm2 restart pm2.json --update-env
+
+    - name: save pm2 status
+      run: sudo pm2 save
+
+    - name: configure startup daemon
+      run: sudo pm2 startup

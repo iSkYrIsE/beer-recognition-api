@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "355dc91e-2508-437c-bf6d-23860e9cb475",
+		"name": "beer-recognition-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "classification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "picture",
+							"type": "file",
+							"src": "/C:/Users/bisite/Desktop/IMG_6183.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/beer-recognition/v1/model/predict",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"beer-recognition",
+						"v1",
+						"model",
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

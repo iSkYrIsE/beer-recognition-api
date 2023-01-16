@@ -1,0 +1,11 @@
+{
+  "apps" : [
+    {
+      "name": "beer-recognition-api",
+      "interpreter": "/bin/bash",
+      "script": "launch.sh",
+      "out_file": "/var/log/beer-recognition-api.log",
+      "error_file": "/var/log/beer-recognition-api.err",
+    }
+  ]
+}
