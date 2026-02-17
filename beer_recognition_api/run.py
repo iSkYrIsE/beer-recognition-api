@@ -77,7 +77,7 @@ def main():
     print(f'Version: {get_version()}')
     print(f'Base URL: http://localhost:{config.PORT}{config.URL_PREFIX}')
     print(separator_str)
-    app.run(host=config.HOST, port=config.PORT, debug=config.DEBUG_MODE)
+    app.run(host=config.HOST, port=config.PORT)
 
 
 
