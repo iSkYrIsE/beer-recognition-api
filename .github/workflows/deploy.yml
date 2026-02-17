@@ -1,5 +1,7 @@
 name: deploy-pm2
 
+permissions:
+  contents: read
 
 on:
   push:
